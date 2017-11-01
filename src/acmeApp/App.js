@@ -6,7 +6,7 @@ import ContactSection from './ContactSection'
 import AddressCard from './AddressCard'
 import PhoneCard from './PhoneCard'
 import CustomerSection from './CustomerSection'
-import './index.css'
+// import './index.css'
 
 const App = ({data}) => {
   return (
