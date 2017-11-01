@@ -6,7 +6,9 @@ const MonsterSection = ({arr}) => {
   return (
     <div className='monster-section'>
       {
-        arr.map((monster) => {
+        arr.filter((monster) => {
+          return monster.name[0] === 'M'
+        }).map((monster) => {
           return <MonsterCard monster={monster} />
         })
       }
