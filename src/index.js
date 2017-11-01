@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom'
 // import App from './acmeApp/App'
 // import data from './acmeApp/data'
 // import MonsterApp from './monsterMash/monsterApp'
-import App from './smartApp/App'
+import SmartApp from './smartApp/SmartApp'
 
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<SmartApp />, document.getElementById('root'))
 registerServiceWorker()
