@@ -1,0 +1,9 @@
+.chat-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3% 5%;
+  padding: 3%;
+  border: 2px solid gray;
+}
