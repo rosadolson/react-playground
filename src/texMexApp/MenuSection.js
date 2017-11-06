@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MenuCard from './MenuCard'
-import MenuSearch from './MenuSearch'
 
 const MenuSection = ({ arr }) => {
   return (
     <div>
       <div className='menu-section'>
-        <MenuSearch />
         {
           arr.map((item, index) => {
             return <MenuCard
@@ -26,7 +24,6 @@ const MenuSection = ({ arr }) => {
 }
 
 MenuSection.propTypes = {
-  arr: PropTypes.array.isRequired
+  arr: PropTypes.any
 }
-
 export default MenuSection
