@@ -18,7 +18,7 @@ const NavBar = ({ navTitle }) => {
 }
 
 NavBar.propTypes = {
-  navTitle: PropTypes.array.isRequired
+  navTitle: PropTypes.string.isRequired
 }
 
 export default NavBar
