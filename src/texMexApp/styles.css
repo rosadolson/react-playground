@@ -1,3 +1,100 @@
+body {
+  background-color: white;
+}
+
+.nav-bar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  background-color: white;
+  opacity: 0.4;
+}
+
+.nav-bar-title {
+  width: 25%;
+  padding-left: 2%;
+  color: black;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #d2a679;
+}
+
+.nav-bar-link {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.header-section {
+  display: flex;
+  justify-content: column;
+  flex-wrap: wrap;
+}
+
+.main-title-lous {
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  left: 5%;
+  top: 20%;
+  z-index: -1;
+  font-size: 5em;
+  padding-top: 25%;
+  color: #392613;
+}
+
+.main-title-tex {
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  left: 1%;
+  top: 30%;
+  z-index: 0;
+  font-size: 9em;
+  padding-top: 26%;
+  color: #392613;
+}
+
+.header-img {
+  position: absolute;
+  right: 0px;
+  top: -20%;
+  z-index: -2;
+  width: 100%;
+  opacity: 0.85;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 0;
+  padding-top: 3%;
+  color: #392613;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  color: #392613;
+}
+
 .spicy-icon {
   color: red;
 }
@@ -10,6 +107,37 @@
   color: green;
 }
 
+.menu-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  color: #392613;
+}
+
 .menu-card img {
   width: 25%;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3%;
+}
+
+.address-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

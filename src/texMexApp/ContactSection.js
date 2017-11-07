@@ -5,8 +5,8 @@ import PhoneCard from './PhoneCard'
 
 const ContactSection = ({arr, phone}) => {
   return (
-    <div>
-      <h1>Contact Us:</h1>
+    <div className='contact-section'>
+      <h1 className='contact-title'>Contact Us:</h1>
       <AddressCard
         street={arr.street}
         suite={arr.suite}

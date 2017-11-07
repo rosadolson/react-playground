@@ -4,14 +4,12 @@ import PropTypes from 'prop-types'
 
 const NavBar = ({ navTitle }) => {
   return (
-    <div>
-      <div>
-        <span className='nav-bar-title' />{navTitle}
-      </div>
+    <div className='nav-bar-section'>
+      <p className='nav-bar-title'>{navTitle}</p>
       <nav className='nav-bar-link'>
-        <NavBarLink name={'home'} />
-        <NavBarLink name={'menu'} />
-        <NavBarLink name={'contact'} />
+        <NavBarLink name={'Menu'} />
+        <NavBarLink name={'About'} />
+        <NavBarLink name={'Contact'} />
       </nav>
     </div>
   )
