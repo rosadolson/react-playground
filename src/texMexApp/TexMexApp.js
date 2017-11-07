@@ -11,8 +11,17 @@ class MenuSearch extends Component {
     searchEntry: undefined
   }
 
+  componentWillMount () {
+    this.setState({ foods: data.items })
+  }
+
+  resetSearch = () => {
+    this.setState({ foods: data.items })
+    this.setState({ searchEntry: 'Type a new search!' })
+  }
+
   handleChange = (e) => {
-    let wordToSearch = e.target.value
+    let wordToSearch = e.target.value.toLowerCase()
     this.setState({ searchEntry: wordToSearch })
   }
 
@@ -45,7 +54,8 @@ class MenuSearch extends Component {
         <p>You entered: {this.state.searchEntry}</p>
         <form>
           <input type='text' placeholder='Search' onChange={this.handleChange} />
-          <button type='button' onSubmit={this.submitSearch}>Search</button>
+          <button type='button' onClick={this.submitSearch}>Search</button>
+          <button type='button' onClick={this.resetSearch}>Reset</button>
         </form>
         <div>
           <MenuSection arr={this.state.foods} />

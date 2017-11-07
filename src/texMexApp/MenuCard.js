@@ -16,11 +16,11 @@ const MenuCard = ({ img, name, price, category, spiceLevel }) => {
 }
 
 MenuCard.propTypes = {
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired,
-  spiceLevel: PropTypes.number.isRequired
+  img: PropTypes.any,
+  name: PropTypes.any,
+  price: PropTypes.any,
+  category: PropTypes.any,
+  spiceLevel: PropTypes.any
 }
 
 export default MenuCard

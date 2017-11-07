@@ -24,7 +24,7 @@ const SpiceIcon = ({ spice }) => {
 }
 
 SpiceIcon.propTypes = {
-  spice: PropTypes.number.isRequired
+  spice: PropTypes.any
 }
 
 export default SpiceIcon
