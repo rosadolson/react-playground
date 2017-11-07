@@ -1,30 +1,28 @@
 body {
-  background-color: white;
+  background-color: #F5F9E9;
 }
 
 .nav-bar-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30px;
+  width: 100%;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0px;
-  background-color: white;
-  opacity: 0.4;
+  background-color: #283D3B;
+  opacity: 0.9;
 }
 
 .nav-bar-title {
   width: 25%;
   padding-left: 2%;
-  color: black;
-  font-size: 16px;
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
+  color: white;
 }
 
 a:hover {
@@ -39,60 +37,51 @@ a:hover {
 
 .header-section {
   display: flex;
-  justify-content: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14%;
+  margin-bottom: 16%;
 }
 
-.main-title-lous {
-  display: flex;
-  align-self: flex-start;
-  position: relative;
-  left: 5%;
-  top: 20%;
-  z-index: -1;
-  font-size: 5em;
-  padding-top: 25%;
-  color: #392613;
-}
-
-.main-title-tex {
-  display: flex;
-  align-self: flex-start;
-  position: relative;
-  left: 1%;
-  top: 30%;
-  z-index: 0;
-  font-size: 9em;
-  padding-top: 26%;
-  color: #392613;
+.main-title {
+  text-align: center;
+  font-size: 100px;
+  color: white;
 }
 
 .header-img {
   position: absolute;
-  right: 0px;
-  top: -20%;
+  left: -5%;
+  top: 0%;
   z-index: -2;
-  width: 100%;
-  opacity: 0.85;
+  width: 105%;
+  opacity: 0.9;
 }
 
 .menu-header {
   display: flex;
   justify-content: center;
   font-size: 50px;
-  margin-top: 0;
-  padding-top: 3%;
-  color: #392613;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 6%;
+  margin-left: 1%;
+  margin-right: 1%;
+  color: white;
+  background: #283D3B;
+  opacity: 0.8;
 }
 
 .search-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
   margin-bottom: 3%;
-  color: #392613;
+  color: #283D3B;
 }
 
 .spicy-icon {
@@ -110,12 +99,14 @@ a:hover {
 .menu-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 2%;
-  color: #392613;
+  color: #262626;
+  background: #F5F9E9;
+  padding-right: 2%;
+  padding-bottom: 2%;
 }
 
 .menu-card img {
@@ -128,6 +119,10 @@ a:hover {
   align-items: center;
   flex-direction: column;
   padding-top: 3%;
+  background: #283D3B;
+  color: white;
+  opacity: 0.8;
+  padding-bottom: 3%;
 }
 
 .address-card {

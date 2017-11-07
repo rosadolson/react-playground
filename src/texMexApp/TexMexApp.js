@@ -73,13 +73,18 @@ class MenuSearch extends Component {
         <div>
           <NavBar navTitle={data.company[0].title} />
           <div className='header-section'>
-            <h1 className='main-title-lous'>Lous</h1>
-            <h1 className='main-title-tex'>Tex Mex</h1>
-            <img className='header-img' src={data.items[18].img} />
+            <h1 className='main-title'>Lous Tex Mex</h1>
+            <img className='header-img' src={data.items[13].img} />
           </div>
         </div>
         <h1 className='menu-header'>Dinner Menu</h1>
         <div className='search-section'>
+          <form>
+            <p>Your Search: {this.state.searchEntry}</p>
+            <input type='text' placeholder='Search' onChange={this.handleChange} />
+            <button type='button' onClick={this.submitSearch}>Search</button>
+            <button type='button' onClick={this.resetSearch}>Reset</button>
+          </form>
           <form>
             <p>Search by Spiciness:</p>
             <input type='checkbox'className='spicy-checkbox' onClick={this.spiceyFoods} />
@@ -88,12 +93,6 @@ class MenuSearch extends Component {
             <span className={`fa fa-thermometer-half medium-icon`} />
             <input type='checkbox'className='mild-checkbox' onClick={this.mildFoods} />
             <span className={`fa fa-thermometer-empty mild-icon`} />
-          </form>
-          <form>
-            <p>Your Search: {this.state.searchEntry}</p>
-            <input type='text' placeholder='Search' onChange={this.handleChange} />
-            <button type='button' onClick={this.submitSearch}>Search</button>
-            <button type='button' onClick={this.resetSearch}>Reset</button>
           </form>
         </div>
         <div>
