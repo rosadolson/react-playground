@@ -22,10 +22,10 @@ import ReactDOM from 'react-dom'
 // import RestaurantApp from './restaurantApp/RestaurantApp'
 // import Data from './restaurantApp/Data'
 
-import TexMexApp from './texMexApp/TexMexApp'
-import data from './texMexApp/data'
+import LousTexMexApp from './restaurantApp/LousTexMexApp'
+import data from './restaurantApp/data'
 
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<TexMexApp data={data} />, document.getElementById('root'))
+ReactDOM.render(<LousTexMexApp data={data} />, document.getElementById('root'))
 registerServiceWorker()

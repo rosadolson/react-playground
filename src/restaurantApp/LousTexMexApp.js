@@ -5,7 +5,7 @@ import MenuSection from './MenuSection'
 import ContactSection from './ContactSection'
 import NavBar from './NavBar'
 
-class MenuSearch extends Component {
+class LousTexMexApp extends Component {
   state = {
     foods: undefined,
     searchEntry: undefined
@@ -106,4 +106,4 @@ class MenuSearch extends Component {
   }
 }
 
-export default MenuSearch
+export default LousTexMexApp
