@@ -7,8 +7,7 @@ const RestaurantInfo = ({ name, address, phone }) => {
       <h3>{name}</h3>
       <div>
         <p>
-          {address.street}
-          {address.suite}
+          {address.street} {address.suite}
         </p>
         <p>
           {address.city}, {address.state}

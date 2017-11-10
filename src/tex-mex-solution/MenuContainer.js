@@ -16,12 +16,40 @@ class MenuContainer extends Component {
     this.setState({ searchTerm: e.target.value })
   }
 
+  resetMenuList = () => {
+    this.setState({ menuItems: data.items, searchTerm: '' })
+  }
+
+  setMenuItemsToMild = () => {
+    const mildFoods = this.state.menuItems.filter(item => {
+      return item.spiceLevel < 4
+    })
+    this.setState({ menuItems: mildFoods })
+  }
+
+  setMenuItemsToMedium = () => {
+    const mediumFoods = this.state.menuItems.filter(item => {
+      return (item.spiceLevel >= 4 && item.spiceLevel <= 7)
+    })
+    this.setState({ menuItems: mediumFoods })
+  }
+
+  setMenuItemsToSpicy = () => {
+    const spicyFoods = this.state.menuItems.filter(item => {
+      return item.spiceLevel > 7
+    })
+    this.setState({ menuItems: spicyFoods })
+  }
+
   updateMenuList = (e) => {
     e.preventDefault()
     const updatedMenuItems = this.state.menuItems.filter(item => {
-      return item.name === this.state.searchTerm
+      const searchTerm = this.state.searchTerm.toLowerCase()
+      const menuItem = item.name.toLowerCase()
+      return menuItem.includes(searchTerm)
     })
     console.log(updatedMenuItems)
+    this.setState({ menuItems: updatedMenuItems })
   }
 
   render () {
@@ -30,6 +58,11 @@ class MenuContainer extends Component {
         <SearchForm
           handleSearchTermChange={this.handleSearchTermChange}
           updateMenuList={this.updateMenuList}
+          resetMenuList={this.resetMenuList}
+          searchTerm={this.state.searchTerm}
+          setMenuItemsToMild={this.setMenuItemsToMild}
+          setMenuItemsToMedium={this.setMenuItemsToMedium}
+          setMenuItemsToSpicy={this.setMenuItemsToSpicy}
         />
         {
           this.state.menuItems
