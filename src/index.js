@@ -17,7 +17,8 @@ import ReactDOM from 'react-dom'
 // import LousTexMexApp from './restaurantApp/LousTexMexApp'
 // import data from './restaurantApp/data'
 // import App from './tex-mex-solution/App'
-import App from './holiday-shopping-list/App'
+// import App from './holiday-shopping-list/App'
+import App from './toDoList/App'
 
 import registerServiceWorker from './registerServiceWorker'
 
