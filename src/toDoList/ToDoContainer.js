@@ -4,14 +4,16 @@ import ToDoList from './ToDoList'
 
 class ToDoContainer extends Component {
   state = {
-    toDo: undefined,
+    toDos: undefined,
     title: undefined,
     dueDate: undefined
   }
 
   componentDidMount () {
-    const toDoArray = [{title: 'Bake Cookies', dueDate: '11/10/17'}, {title: 'Do Stuff', dueDate: '12/01/17'}]
-    this.setState({ toDo: toDoArray })
+    const toDoArray = [{title: 'Finish Homework', dueDate: '11/14/17'},
+      {title: 'Do Stuff', dueDate: '11/15/17'},
+      {title: 'Thanksgiving Dinner', dueDate: '11/23/17'}]
+    this.setState({ toDos: toDoArray })
   }
 
   handleTitleChange = (e) => {
@@ -25,8 +27,9 @@ class ToDoContainer extends Component {
   addNewToDo = (e) => {
     e.preventDefault()
     const newToDo = { title: this.state.title, dueDate: this.state.dueDate }
-    const newToDoList = this.state.toDo
+    const newToDoList = this.state.toDos
     newToDoList.push(newToDo)
+    this.setState({ toDos: newToDoList })
   }
 
   render () {
@@ -38,8 +41,8 @@ class ToDoContainer extends Component {
           addNewToDo={this.addNewToDo}
         />
         {
-          this.state.toDo
-            ? <ToDoList toDo={this.state.toDo} />
+          this.state.toDos
+            ? <ToDoList toDos={this.state.toDos} />
             : <h3>No ToDo's yet</h3>
         }
       </div>

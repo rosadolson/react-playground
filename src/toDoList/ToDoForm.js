@@ -1,19 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const formStyle = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignSelf: 'center',
+    alignItems: 'center',
+    marginBottom: '3%',
+    background: 'white',
+    borderRadius: '5px',
+    border: '1px solid #e22d54',
+    color: '#e22d54',
+    padding: '4%'
+  }
+}
+
 const ToDoForm = ({ addNewToDo, handleTitleChange, handleDueDateChange }) => {
   return (
-    <div>
+    <div style={formStyle.container}>
       <div>
-        <label> Add a New ToDo </label>
-        <input onChange={handleTitleChange} placeholder='Enter Task Here' />
+        <label> Add A New To Do: </label>
+        <input onChange={handleTitleChange} placeholder='Enter To Do Here' />
       </div>
       <div>
-        <label> Add a Due Date </label>
+        <label> Add A Due Date: </label>
         <input onChange={handleDueDateChange} placeholder='Enter Due Date Here' />
       </div>
       <div>
-        <button type='button' onClick={addNewToDo}>Add ToDo</button>
+        <button type='button' onClick={addNewToDo}>Add To Do</button>
       </div>
     </div>
   )
