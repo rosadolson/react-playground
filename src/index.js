@@ -18,7 +18,9 @@ import ReactDOM from 'react-dom'
 // import data from './restaurantApp/data'
 // import App from './tex-mex-solution/App'
 // import App from './holiday-shopping-list/App'
-import App from './toDoList/App'
+// import App from './toDoList/App'
+import App from './toDoSolution/App'
+// import App from './mapAndFilterReview/App'
 
 import registerServiceWorker from './registerServiceWorker'
 
