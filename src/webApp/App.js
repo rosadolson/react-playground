@@ -6,78 +6,86 @@ import NavigationBar from './Navigation'
 import Section from './Section'
 import ServicesCard from './ServicesCard'
 import ProductCard from './ProductCard'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
-      <NavigationBar />
-      <Jumbotron
-        title={faker.name.title()}
-        desc={faker.lorem.sentences()}
-      />
-      <Section
-        sectionStyle='about'
-        title={'About'}
-        content={faker.lorem.sentences()}
-      />
-      <Section
-        sectionStyle='products'
-        title={'Products'}
-        content={faker.lorem.sentences()}
-      >
-        <div className='product-card-container'>
-          <ProductCard
-            product={faker.commerce.product()}
-            price={faker.commerce.price()}
-            img={faker.random.image()}
-          />
-          <ProductCard
-            product={faker.commerce.product()}
-            price={faker.commerce.price()}
-            img={faker.random.image()}
-          />
-          <ProductCard
-            product={faker.commerce.product()}
-            price={faker.commerce.price()}
-            img={faker.random.image()}
-          />
-          <ProductCard
-            product={faker.commerce.product()}
-            price={faker.commerce.price()}
-            img={faker.random.image()}
-          />
-          <ProductCard
-            product={faker.commerce.product()}
-            price={faker.commerce.price()}
-            img={faker.random.image()}
-          />
-        </div>
-      </Section>
-      <Section
-        sectionStyle='services'
-        title={'Services'}
-        content={faker.lorem.sentences()}
-      >
-        <div className='services-card-container'>
-          <ServicesCard
-            title={'Video Webinars'}
-            details={'Ichiban Video Webinars'}
-          />
-          <ServicesCard
-            title={'Video Webinars'}
-            details={'Ichiban Video Webinars'}
-          />
-          <ServicesCard
-            title={'Video Webinars'}
-            details={'Ichiban Video Webinars'}
-          />
-          <ServicesCard
-            title={'Video Webinars'}
-            details={'Ichiban Video Webinars'}
-          />
-        </div>
-      </Section>
-    </div>
+    <Router>
+      <div>
+        <Route exact path='/' component={Jumbotron} />
+
+        <NavigationBar />
+        <Jumbotron
+          title={faker.name.title()}
+          desc={faker.lorem.sentences()}
+        />
+        <Section
+          sectionStyle='about'
+          title={'About'}
+          content={faker.lorem.sentences()}
+        />
+        <Section
+          sectionStyle='products'
+          title={'Products'}
+          content={faker.lorem.sentences()}
+        >
+          <div className='product-card-container'>
+            <ProductCard
+              product={faker.commerce.product()}
+              price={faker.commerce.price()}
+              img={faker.random.image()}
+            />
+            <ProductCard
+              product={faker.commerce.product()}
+              price={faker.commerce.price()}
+              img={faker.random.image()}
+            />
+            <ProductCard
+              product={faker.commerce.product()}
+              price={faker.commerce.price()}
+              img={faker.random.image()}
+            />
+            <ProductCard
+              product={faker.commerce.product()}
+              price={faker.commerce.price()}
+              img={faker.random.image()}
+            />
+            <ProductCard
+              product={faker.commerce.product()}
+              price={faker.commerce.price()}
+              img={faker.random.image()}
+            />
+          </div>
+        </Section>
+        <Section
+          sectionStyle='services'
+          title={'Services'}
+          content={faker.lorem.sentences()}
+        >
+          <div className='services-card-container'>
+            <ServicesCard
+              title={'Video Webinars'}
+              details={'Ichiban Video Webinars'}
+            />
+            <ServicesCard
+              title={'Video Webinars'}
+              details={'Ichiban Video Webinars'}
+            />
+            <ServicesCard
+              title={'Video Webinars'}
+              details={'Ichiban Video Webinars'}
+            />
+            <ServicesCard
+              title={'Video Webinars'}
+              details={'Ichiban Video Webinars'}
+            />
+          </div>
+        </Section>
+      </div>
+    </Router>
   )
 }
 
