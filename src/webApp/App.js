@@ -15,9 +15,10 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Route exact path='/' component={Jumbotron} />
-
         <NavigationBar />
+        <Route exact path='/' component={Jumbotron} />
+        <Route path='/section/:sectionTitle' component={Section} />
+
         <Jumbotron
           title={faker.name.title()}
           desc={faker.lorem.sentences()}
