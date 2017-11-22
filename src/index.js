@@ -22,7 +22,8 @@ import ReactDOM from 'react-dom'
 // import App from './toDoSolution/App'
 // import App from './mapAndFilterReview/App'
 // import App from './router-introduction/App'
-import App from './webApplication/App'
+// import App from './webApplication/App'
+import App from './starbucksAnalysis/App'
 
 import registerServiceWorker from './registerServiceWorker'
 

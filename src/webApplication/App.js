@@ -9,19 +9,10 @@ import {
   Route
 } from 'react-router-dom'
 
-const styles = {
-  container: {
-    backgroundColor: '#bdc3c7',
-    height: '100vh',
-    width: '100vw',
-    margin: '-1%'
-  }
-}
-
 const App = () => {
   return (
     <Router>
-      <div style={styles.container}>
+      <div>
         <NavigationBar />
         <Route exact path='/' component={HomeContainer} />
         <Route path='/about' component={AboutContainer} />

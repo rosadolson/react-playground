@@ -7,9 +7,6 @@ const styles = {
     borderRadius: '8px',
     width: '25%',
     color: '#16a085',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     padding: '1%'
   },
   img: {
