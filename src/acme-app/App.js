@@ -8,9 +8,17 @@ import PhoneCard from './PhoneCard'
 import CustomerSection from './CustomerSection'
 // import './index.css'
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
+}
+
 const App = ({data}) => {
   return (
-    <div>
+    <div styles={styles.container}>
       <Jumbotron
         title={data.company[0].title}
       />

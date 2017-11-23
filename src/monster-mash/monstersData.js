@@ -1,9 +1,3 @@
-import React from 'react'
-// import './style.css'
-import Jumbotron from './Jumbotron'
-import MonsterSection from './MonsterSection'
-import PropTypes from 'prop-types'
-
 function Monster (name, diet, img) {
   this.name = name
   this.diet = diet
@@ -20,17 +14,4 @@ const mike = new Monster('Mike Wazowski', ['not snow cones', 'cheerios'], 'https
 
 monsters.push(jason, frankenstein, yeti, dracula, mike)
 
-const MonsterApp = () => {
-  return (
-    <div>
-      <Jumbotron title='Monster Mash' />
-      <MonsterSection arr={monsters} />
-    </div>
-  )
-}
-
-MonsterApp.propTypes = {
-  monsters: PropTypes.object.isRequired
-}
-
-export default MonsterApp
+export default monsters

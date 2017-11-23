@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import data from '../restaurantApp/data'
+import data from '../restaurant-app/data'
 import MenuList from './MenuList'
 import SearchForm from './SearchForm'
 
@@ -43,10 +43,13 @@ class MenuContainer extends Component {
 
   updateMenuList = (e) => {
     e.preventDefault()
-    const updatedMenuItems = this.state.menuItems.filter(item => {
-      const searchTerm = this.state.searchTerm.toLowerCase()
+
+    const {menuItems, searchTerm} = this.state
+
+    const updatedMenuItems = menuItems.filter(item => {
+      const searchTermToLowerCase = searchTerm.toLowerCase()
       const menuItem = item.name.toLowerCase()
-      return menuItem.includes(searchTerm)
+      return menuItem.includes(searchTermToLowerCase)
     })
     console.log(updatedMenuItems)
     this.setState({ menuItems: updatedMenuItems })

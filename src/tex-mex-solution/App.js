@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../restaurantApp/data'
+import data from '../restaurant-app/data'
 import RestaurantInfo from './RestaurantInfo'
 import MenuContainer from './MenuContainer'
 

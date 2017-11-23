@@ -2,13 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CustomerCard from './CustomerCard'
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  }
+}
+
 const CustomerSection = ({arr, customer}) => {
   return (
     <div>
       <div>
         <h2 className='customer-header'>MEET SOME OF OUR BEST CUSTOMERS:</h2>
       </div>
-      <div className='customer-section'>
+      <div style={styles.container}>
         {
           arr.map((customer) => {
             return <CustomerCard

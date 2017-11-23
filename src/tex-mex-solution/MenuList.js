@@ -4,11 +4,11 @@ import MenuItem from './MenuItem'
 
 const MenuList = ({ foodItems }) => {
   return (
-    <ul>
+    <div>
       {
         foodItems.map((food, index) => {
           return (
-            <li key={index}>
+            <div key={index}>
               <MenuItem
                 name={food.name}
                 price={food.price}
@@ -16,11 +16,11 @@ const MenuList = ({ foodItems }) => {
                 spiceLevel={food.spiceLevel}
                 img={food.img}
               />
-            </li>
+            </div>
           )
         })
       }
-    </ul>
+    </div>
   )
 }
 

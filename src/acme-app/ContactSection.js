@@ -1,9 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
+}
+
 const Section = ({title, content, sectionStyle, children}) => {
   return (
-    <div className='contact-section'>
+    <div styles={styles.container}>
       <h2> {title} </h2>
       <p> {content} </p>
       { children }
