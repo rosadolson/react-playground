@@ -4,11 +4,14 @@ import Link from './Link'
 const styles = {
   container: {
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '100%',
-    textDecoration: 'none',
-    color: 'black'
+    flexWrap: 'nowrap',
+    marginLeft: '2%',
+    marginRight: '2%',
+    paddingTop: '2%',
+    paddingBottom: '2%',
+    backgroundColor: 'white',
+    border: '3px solid #e3e0cf'
   }
 }
 

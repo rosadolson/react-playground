@@ -5,13 +5,18 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    backgroundColor: 'white',
+    paddingTop: '3%',
+    textAlign: 'center',
+    color: '#9fa8a3',
+    border: ' 3px solid #e3e0cf',
+    margin: '2%'
   }
 }
 
 const Section = ({title, content, sectionStyle, children}) => {
   return (
-    <div styles={styles.container}>
+    <div style={styles.container}>
       <h2> {title} </h2>
       <p> {content} </p>
       { children }

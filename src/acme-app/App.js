@@ -9,16 +9,17 @@ import CustomerSection from './CustomerSection'
 // import './index.css'
 
 const styles = {
-  container: {
+  contactCardContainer: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingBottom: '3%'
   }
 }
 
 const App = ({data}) => {
   return (
-    <div styles={styles.container}>
+    <div>
       <Jumbotron
         title={data.company[0].title}
       />
@@ -28,7 +29,7 @@ const App = ({data}) => {
         title={'CONTACT US'}
         content={'Need to get in touch with us? Here are a couple ways to do that!'}
       >
-        <div className='contact-card-container'>
+        <div style={styles.contactCardContainer}>
           <AddressCard
             street={data.company[0].street}
             city={data.company[0].city}
