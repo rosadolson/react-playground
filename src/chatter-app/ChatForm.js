@@ -3,23 +3,41 @@ import PropTypes from 'prop-types'
 
 const styles = {
   container: {
-    width: '88%',
+    border: '3px solid #2c3e50',
+    borderRadius: '6px',
+    width: '55%',
+    marginBottom: '4%',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  form: {
+    padding: '3%',
+    display: 'flex',
     justifyContent: 'space-between',
-    marginTop: '5%',
-    marginBottom: '10%'
+    paddingBottom: '3%'
+  },
+  header: {
+    fontFamily: 'Playfair Display, serif',
+    color: '#2c3e50',
+    fontSize: '2em'
+  },
+  button: {
+    marginBottom: '3%'
   }
 }
 
 const ChatForm = ({ setUsername, setMessage, setAvatar, submitInfo }) => {
   return (
-    <form style={styles.container}>
-      <input placeholder='username' onChange={this.setUsername} />
-      <input placeholder='message' onChange={this.setMessage} />
-      <input placeholder='avatar' onChange={this.setAvatar} />
-      <button type='button' onClick={this.submitInfo}>Submit</button>
-    </form>
+    <div style={styles.container}>
+      <h3 style={styles.header}>Add A Chat</h3>
+      <form style={styles.form}>
+        <input placeholder='username' onChange={this.setUsername} />
+        <input placeholder='message' onChange={this.setMessage} />
+        <input placeholder='avatar' onChange={this.setAvatar} />
+      </form>
+      <button style={styles.button} type='button' onClick={this.submitInfo}>Submit</button>
+    </div>
   )
 }
 

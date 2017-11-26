@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import App from './acme-app/App'
-import data from './acme-app/data'
-
 import registerServiceWorker from './registerServiceWorker'
+import App from './chatter-app/App'
 
-ReactDOM.render(<App data={data} />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

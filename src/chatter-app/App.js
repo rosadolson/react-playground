@@ -1,8 +1,21 @@
 import React, {Component} from 'react'
-// import './styles.css'
 import faker from 'faker'
 import Chats from './Chats'
 import ChatForm from './ChatForm'
+// import './styles.css'
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  header: {
+    fontFamily: 'Playfair Display, serif',
+    fontSize: '6em',
+    color: '#2c3e50'
+  }
+}
 
 class ChatterApp extends Component {
   state = {
@@ -58,10 +71,12 @@ class ChatterApp extends Component {
   }
   render () {
     return (
-      <div>
-        <h1>Hello from Chatter App</h1>
+      <div style={styles.container}>
+        <h1 style={styles.header}>Chatter App</h1>
         {
-          this.state.chats ? <Chats chats={this.state.chats} /> : 'Loading...'
+          this.state.chats
+            ? <Chats chats={this.state.chats} />
+            : 'Loading...'
         }
         <ChatForm
           setUsername={this.setUsername}
